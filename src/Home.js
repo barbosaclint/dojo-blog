@@ -8,10 +8,21 @@ const Home = () => {
         { title: 'Welcome Party', body: 'lorem ipsum...', author: 'yoshi', id: 2 },
         { title: 'Web dev top tips', body: 'lorem ipsum...', author: 'luigi', id: 3 }
     ])
+   
+    const handleClick = () => {
+        
+    }
 
-    return (
-        <BlogList blogs={blogs} title="AllBlogs" />
-    );
+    const handleClickAgain = (name) => {
+        
+    }
+
+    return (    
+        <div className = "home">
+           <BlogList blogs={blogs} title={"All Blogs!"} />
+           <BlogList blogs={blogs.filter((blog) => blog.author === 'mario')} title="Mario's Blogs" />
+        </div>
+      );
 }
-
-export default Home;
+ 
+ export default Home;       
